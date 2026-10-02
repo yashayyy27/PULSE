@@ -1,0 +1,9 @@
+{
+  "company": "Wattle & Rye",
+  "seed": 20251006,
+  "start": "2024-01-01",
+  "end": "2025-12-31",
+  "locations": 36,
+  "health_weights": {"Financial": 0.4, "Customer": 0.2, "Operations": 0.25, "Inventory": 0.15},
+  "alerts": {"baseline_weeks": 8, "minimum_deviation": 0.08, "robust_z": 2.5, "minimum_profit_exposure": 150, "critical_exposure": 750}
+}

@@ -1,0 +1,131 @@
+rule,failures,status,detail
+dim_date: nonempty,0,PASS,Empty source tables cannot publish
+dim_date: nulls,0,PASS,Every source column is required
+dim_date: unique key,0,PASS,date_id
+dim_date: valid dates,0,PASS,ISO calendar dates
+dim_date: weekday nonnegative,0,PASS,Negative or infinite source value
+dim_location: nonempty,0,PASS,Empty source tables cannot publish
+dim_location: nulls,0,PASS,Every source column is required
+dim_location: unique key,0,PASS,location_id
+dim_location: location_id nonnegative,0,PASS,Negative or infinite source value
+dim_product: nonempty,0,PASS,Empty source tables cannot publish
+dim_product: nulls,0,PASS,Every source column is required
+dim_product: unique key,0,PASS,product_id
+dim_product: product_id nonnegative,0,PASS,Negative or infinite source value
+dim_product: list_price nonnegative,0,PASS,Negative or infinite source value
+dim_product: unit_cost nonnegative,0,PASS,Negative or infinite source value
+dim_customer: nonempty,0,PASS,Empty source tables cannot publish
+dim_customer: nulls,0,PASS,Every source column is required
+dim_customer: unique key,0,PASS,customer_id
+dim_customer: customer_id nonnegative,0,PASS,Negative or infinite source value
+dim_channel: nonempty,0,PASS,Empty source tables cannot publish
+dim_channel: nulls,0,PASS,Every source column is required
+dim_channel: unique key,0,PASS,channel_id
+dim_channel: channel_id nonnegative,0,PASS,Negative or infinite source value
+dim_channel: fee_rate nonnegative,0,PASS,Negative or infinite source value
+dim_promotion: nonempty,0,PASS,Empty source tables cannot publish
+dim_promotion: nulls,0,PASS,Every source column is required
+dim_promotion: unique key,0,PASS,promotion_id
+dim_promotion: promotion_id nonnegative,0,PASS,Negative or infinite source value
+dim_promotion: discount_rate nonnegative,0,PASS,Negative or infinite source value
+dim_employee: nonempty,0,PASS,Empty source tables cannot publish
+dim_employee: nulls,0,PASS,Every source column is required
+dim_employee: unique key,0,PASS,employee_id
+dim_employee: location_id FK,0,PASS,dim_location
+dim_employee: employee_id nonnegative,0,PASS,Negative or infinite source value
+dim_employee: location_id nonnegative,0,PASS,Negative or infinite source value
+fact_sales: nonempty,0,PASS,Empty source tables cannot publish
+fact_sales: nulls,0,PASS,Every source column is required
+fact_sales: unique key,0,PASS,sale_id
+fact_sales: date_id FK,0,PASS,dim_date
+fact_sales: location_id FK,0,PASS,dim_location
+fact_sales: product_id FK,0,PASS,dim_product
+fact_sales: customer_id FK,0,PASS,dim_customer
+fact_sales: channel_id FK,0,PASS,dim_channel
+fact_sales: promotion_id FK,0,PASS,dim_promotion
+fact_sales: valid dates,0,PASS,ISO calendar dates
+fact_sales: sale_id nonnegative,0,PASS,Negative or infinite source value
+fact_sales: location_id nonnegative,0,PASS,Negative or infinite source value
+fact_sales: product_id nonnegative,0,PASS,Negative or infinite source value
+fact_sales: customer_id nonnegative,0,PASS,Negative or infinite source value
+fact_sales: channel_id nonnegative,0,PASS,Negative or infinite source value
+fact_sales: promotion_id nonnegative,0,PASS,Negative or infinite source value
+fact_sales: quantity nonnegative,0,PASS,Negative or infinite source value
+fact_sales: list_sales nonnegative,0,PASS,Negative or infinite source value
+fact_sales: discount nonnegative,0,PASS,Negative or infinite source value
+fact_sales: refund nonnegative,0,PASS,Negative or infinite source value
+fact_sales: cogs nonnegative,0,PASS,Negative or infinite source value
+fact_sales: channel_fee nonnegative,0,PASS,Negative or infinite source value
+fact_labour: nonempty,0,PASS,Empty source tables cannot publish
+fact_labour: nulls,0,PASS,Every source column is required
+fact_labour: unique key,0,PASS,labour_id
+fact_labour: date_id FK,0,PASS,dim_date
+fact_labour: location_id FK,0,PASS,dim_location
+fact_labour: employee_id FK,0,PASS,dim_employee
+fact_labour: valid dates,0,PASS,ISO calendar dates
+fact_labour: labour_id nonnegative,0,PASS,Negative or infinite source value
+fact_labour: location_id nonnegative,0,PASS,Negative or infinite source value
+fact_labour: employee_id nonnegative,0,PASS,Negative or infinite source value
+fact_labour: hours nonnegative,0,PASS,Negative or infinite source value
+fact_labour: labour_cost nonnegative,0,PASS,Negative or infinite source value
+fact_inventory: nonempty,0,PASS,Empty source tables cannot publish
+fact_inventory: nulls,0,PASS,Every source column is required
+fact_inventory: unique key,0,PASS,inventory_id
+fact_inventory: date_id FK,0,PASS,dim_date
+fact_inventory: location_id FK,0,PASS,dim_location
+fact_inventory: product_id FK,0,PASS,dim_product
+fact_inventory: valid dates,0,PASS,ISO calendar dates
+fact_inventory: inventory_id nonnegative,0,PASS,Negative or infinite source value
+fact_inventory: location_id nonnegative,0,PASS,Negative or infinite source value
+fact_inventory: product_id nonnegative,0,PASS,Negative or infinite source value
+fact_inventory: available nonnegative,0,PASS,Negative or infinite source value
+fact_inventory: closing_units nonnegative,0,PASS,Negative or infinite source value
+fact_operating_costs: nonempty,0,PASS,Empty source tables cannot publish
+fact_operating_costs: nulls,0,PASS,Every source column is required
+fact_operating_costs: unique key,0,PASS,cost_id
+fact_operating_costs: date_id FK,0,PASS,dim_date
+fact_operating_costs: location_id FK,0,PASS,dim_location
+fact_operating_costs: valid dates,0,PASS,ISO calendar dates
+fact_operating_costs: cost_id nonnegative,0,PASS,Negative or infinite source value
+fact_operating_costs: location_id nonnegative,0,PASS,Negative or infinite source value
+fact_operating_costs: overhead nonnegative,0,PASS,Negative or infinite source value
+fact_promotions: nonempty,0,PASS,Empty source tables cannot publish
+fact_promotions: nulls,0,PASS,Every source column is required
+fact_promotions: unique key,0,PASS,spend_id
+fact_promotions: date_id FK,0,PASS,dim_date
+fact_promotions: location_id FK,0,PASS,dim_location
+fact_promotions: promotion_id FK,0,PASS,dim_promotion
+fact_promotions: valid dates,0,PASS,ISO calendar dates
+fact_promotions: spend_id nonnegative,0,PASS,Negative or infinite source value
+fact_promotions: location_id nonnegative,0,PASS,Negative or infinite source value
+fact_promotions: promotion_id nonnegative,0,PASS,Negative or infinite source value
+fact_promotions: campaign_spend nonnegative,0,PASS,Negative or infinite source value
+fact_feedback: nonempty,0,PASS,Empty source tables cannot publish
+fact_feedback: nulls,0,PASS,Every source column is required
+fact_feedback: unique key,0,PASS,feedback_id
+fact_feedback: sale_id FK,0,PASS,fact_sales
+fact_feedback: feedback_id nonnegative,0,PASS,Negative or infinite source value
+fact_feedback: sale_id nonnegative,0,PASS,Negative or infinite source value
+fact_feedback: rating nonnegative,0,PASS,Negative or infinite source value
+sales: ledger bounds,0,PASS,Discount plus refund <= list sales
+sales: daypart,0,PASS,Controlled vocabulary
+sales: plausible extremes,0,PASS,"Prototype source contract: 1–20 units, <= A$1,000"
+products: category,0,PASS,Controlled vocabulary
+customers: segment,0,PASS,Controlled vocabulary
+locations: state,0,PASS,Fictional operating footprint
+feedback: rating,0,PASS,1–5
+inventory: availability,0,PASS,0/1
+inventory: stock consistency,0,PASS,Unavailable means zero units
+labour: hours,0,PASS,0–16 hours per employee/day
+labour: employee assignment,0,PASS,Employee belongs to paid location
+feedback: unique response,0,PASS,At most one response per order
+calendar: no missing periods,0,PASS,Continuous daily calendar
+fact_labour: store/day coverage,0,PASS,"All stores, all calendar days"
+fact_inventory: store/day coverage,0,PASS,"All stores, all calendar days"
+fact_operating_costs: store/day coverage,0,PASS,"All stores, all calendar days"
+fact_promotions: store/day coverage,0,PASS,"All stores, all calendar days"
+inventory: natural key,0,PASS,One daily observation per SKU
+inventory: SKU coverage,0,PASS,Every product/store/day
+fact_operating_costs: natural key,0,PASS,One store/day row
+fact_promotions: natural key,0,PASS,One store/day row
+promotions: order assignment,0,PASS,Order discount offer must match the store/day campaign spend assignment

@@ -1,0 +1,27 @@
+{
+  "synthetic": "true",
+  "seed": "20251006",
+  "small": "False",
+  "start": "2024-01-01",
+  "end": "2025-12-31",
+  "orders": "1060291",
+  "locations": "36",
+  "raw_sha256": {
+    "dim_date": "07a9cd38cac1d6694f2271147867d1844955b62c852ef02d1c13ae70ad8b19f2",
+    "dim_location": "b5b44740d19d8d5cb0bc1649ee28ff94d9db0190fc16cc4d8ea07dc261556e58",
+    "dim_product": "90edaf2a3a328934f9f545bdc18df28836d3f63cd16b75c528034c8c9f74383f",
+    "dim_customer": "ca0ef1142aefa16d6ff62de96f7ae8cf32ac44b5c06393e04ad6bb2082cbbd85",
+    "dim_channel": "218509aee5f7181f6f0c9c1f3d2afb34c4fb91df673bbe93f0679dfde3735a4f",
+    "dim_promotion": "9a86e4c18e6a8988207d8390649487996220892063969901df5a8d61af8d17c3",
+    "dim_employee": "f4e179a3d8f241c1d7044ba69d06eb669a70815fb155c2a4893c986c2cfe73fc",
+    "fact_sales": "8175769a8ffe5701a691ce025d418fb37b6c8a01a8f6f145fc24d3f04b8fcf93",
+    "fact_labour": "90f0e8bdb806041335ed3e452ed44d47f162648ea46c55d1584c093ddc38c423",
+    "fact_inventory": "f38c21eae175e948ad3826eb2b04787397ce5dce60b551ac1da6b37ed2b69228",
+    "fact_operating_costs": "a86ebc548cf5734b76abcd8f900c3d8cf29da94cd349b313e414a9239474d2dd",
+    "fact_promotions": "912feacc2fb712508359e4f78764d13fda02a20ce21a5567a714d87676bf96f5",
+    "fact_feedback": "7c322b6e150f397a0386275362dabdbff2e6d2eafcd8b65f073afb1361061299"
+  },
+  "validation_rules": 130,
+  "validation_failures": 0,
+  "revenue_reconciliation": 0.0
+}

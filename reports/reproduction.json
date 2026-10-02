@@ -1,0 +1,8 @@
+{
+  "python": "3.12 clean virtual environment",
+  "setup_seconds": 53.272,
+  "source_reproduction_seconds": 22.252,
+  "full_orders": "1060291",
+  "identical_raw_hashes": true,
+  "source_tables": 13
+}

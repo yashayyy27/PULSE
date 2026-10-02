@@ -1,0 +1,170 @@
+{
+  "title": "PULSE \u2014 MONDAY MORNING BRIEF",
+  "synthetic": true,
+  "week_ending": "2025-12-28",
+  "business_health": {
+    "revenue": 164347.84,
+    "operating_profit": 2863.9900000000016,
+    "operating_margin": 0.017426392704644016,
+    "transactions": 9504.0
+  },
+  "health_index": {
+    "overall": 57.378196744045724,
+    "scores": {
+      "Financial": 11.617595136429344,
+      "Customer": 98.5031917235307,
+      "Operations": 73.509350572463,
+      "Inventory": 97.6878846776806
+    },
+    "normalised_weights": {
+      "Financial": 0.4,
+      "Customer": 0.2,
+      "Operations": 0.25,
+      "Inventory": 0.15
+    },
+    "targets": {
+      "operating_margin": 0.15,
+      "satisfaction": 4.2,
+      "labour_pct": 0.33,
+      "inventory_availability": 0.98
+    },
+    "method": "Ratio to target, capped 0\u2013100; inverse ratio for labour share. Fictional stakeholder targets; not a predictive risk score."
+  },
+  "top_issues": [
+    {
+      "entity": "Norwood",
+      "issue": "operating_profit",
+      "actual": -795.4000000000003,
+      "baseline": -21.78500000000031,
+      "estimated_profit_exposure": 773.615,
+      "evidence": [
+        {
+          "contributor": "Basket / price / product mix",
+          "impact": -506.5990099009901
+        },
+        {
+          "contributor": "Order volume",
+          "impact": -454.9009900990099
+        }
+      ],
+      "investigation": "Reconcile roster, discount and channel records with store manager before changing hours or offers.",
+      "risk": "Demand and service trade-offs; period comparison does not establish causality.",
+      "success_measure": "Review next 4 complete weeks of margin, satisfaction and warning recurrence; no achieved benefit claimed."
+    },
+    {
+      "entity": "Newcastle",
+      "issue": "gross_profit",
+      "actual": 1819.1599999999999,
+      "baseline": 2415.84,
+      "estimated_profit_exposure": 596.6800000000003,
+      "evidence": [
+        {
+          "contributor": "Order volume",
+          "impact": -252.24137931034483
+        },
+        {
+          "contributor": "Refunds",
+          "impact": -93.0
+        }
+      ],
+      "investigation": "Reconcile roster, discount and channel records with store manager before changing hours or offers.",
+      "risk": "Demand and service trade-offs; period comparison does not establish causality.",
+      "success_measure": "Review next 4 complete weeks of margin, satisfaction and warning recurrence; no achieved benefit claimed."
+    },
+    {
+      "entity": "Woden",
+      "issue": "labour_pct",
+      "actual": 0.5561934942678721,
+      "baseline": 0.44754678026380684,
+      "estimated_profit_exposure": 582.8352972748082,
+      "evidence": [
+        {
+          "contributor": "Basket / price / product mix",
+          "impact": -507.69009584664536
+        },
+        {
+          "contributor": "Labour cost",
+          "impact": -149.23999999999978
+        }
+      ],
+      "investigation": "Reconcile roster, discount and channel records with store manager before changing hours or offers.",
+      "risk": "Demand and service trade-offs; period comparison does not establish causality.",
+      "success_measure": "Review next 4 complete weeks of margin, satisfaction and warning recurrence; no achieved benefit claimed."
+    }
+  ],
+  "warning_count": 17,
+  "estimated_weekly_profit_exposure": 1890.374999999999,
+  "exposure_method": "Operating-profit warnings only, once per location; median-baseline gaps. No overlapping KPI sums.",
+  "top_opportunity": [
+    {
+      "product": "Harvest bowl",
+      "category": "Kitchen",
+      "outage_days": 181,
+      "reference_sales": 19896.318857142858,
+      "reference_profit": 12825.85780952381,
+      "supported_outage_days": 150,
+      "estimated_revenue_opportunity": 9948.159428571429,
+      "estimated_gross_profit_opportunity": 6412.928904761905
+    }
+  ],
+  "opportunity_assumptions": "Last 56 days; >=3 available days per store/SKU/weekday; 50% substitution. Estimated gross profit, not recovered sales.",
+  "forecast_watch": {
+    "next_28_days_revenue": 660811.92,
+    "model_metrics": [
+      {
+        "metric": "revenue",
+        "selected_model": "Seasonal naive",
+        "MAE": 1103.1528571428576,
+        "RMSE": 1250.168389006629,
+        "MAPE": 0.04854171759433869,
+        "holdout_coverage": 0.5714285714285714,
+        "nominal_coverage": 0.9,
+        "calibration_origins": 3,
+        "validation_naive_MAE": 935.8775,
+        "validation_mean_MAE": 1076.6496130952385
+      },
+      {
+        "metric": "transactions",
+        "selected_model": "Seasonal naive",
+        "MAE": 58.285714285714285,
+        "RMSE": 69.71216331663877,
+        "MAPE": 0.04356865919713915,
+        "holdout_coverage": 0.5714285714285714,
+        "nominal_coverage": 0.9,
+        "calibration_origins": 3,
+        "validation_naive_MAE": 53.30952380952381,
+        "validation_mean_MAE": 54.333333333333336
+      },
+      {
+        "metric": "gross_profit",
+        "selected_model": "Seasonal naive",
+        "MAE": 743.4817857142867,
+        "RMSE": 856.1561707776891,
+        "MAPE": 0.050692449901677435,
+        "holdout_coverage": 0.6071428571428571,
+        "nominal_coverage": 0.9,
+        "calibration_origins": 3,
+        "validation_naive_MAE": 684.1740476190479,
+        "validation_mean_MAE": 861.2166666666669
+      },
+      {
+        "metric": "labour_hours",
+        "selected_model": "Seasonal naive",
+        "MAE": 18.479642857142853,
+        "RMSE": 20.71812706992874,
+        "MAPE": 0.0565072462569911,
+        "holdout_coverage": 0.17857142857142858,
+        "nominal_coverage": 0.9,
+        "calibration_origins": 3,
+        "validation_naive_MAE": 3.817380952380952,
+        "validation_mean_MAE": 5.623779761904757
+      }
+    ],
+    "limitation": "Future forecast begins after dataset end; report week can precede end by six days. Daily empirical bands are approximate, not an aggregate guarantee."
+  },
+  "decisions_required": [
+    "Assign owners to top store investigations within two business days.",
+    "Approve a bounded availability or labour pilot after service and financial guardrails are agreed."
+  ],
+  "limitations": "All synthetic. No real interviews, approvals or achieved benefits. Estimates, forecasts and scenarios require assumptions."
+}

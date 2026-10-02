@@ -1,0 +1,335 @@
+{
+  "metadata": {
+    "synthetic": "true",
+    "seed": "20251006",
+    "small": "False",
+    "start": "2024-01-01",
+    "end": "2025-12-31",
+    "orders": "1060291",
+    "locations": "36"
+  },
+  "source_reconciliation": "PASS",
+  "scopes": [
+    {
+      "location_id": null,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 1,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 2,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 3,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 4,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 5,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 6,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 7,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 8,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 9,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 10,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 11,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 12,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 13,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 14,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 15,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 16,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 17,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 18,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 19,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 20,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 21,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 22,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 23,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 24,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 25,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 26,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 27,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 28,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 29,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 30,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 31,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 32,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 33,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 34,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 35,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    },
+    {
+      "location_id": 36,
+      "profit_bridge": "PASS",
+      "scenario_identity": "PASS"
+    }
+  ],
+  "dimensions": 10,
+  "pages": [
+    {
+      "page": "Executive Overview",
+      "status": "PASS",
+      "seconds": 0.355,
+      "charts": 1,
+      "tables": 1
+    },
+    {
+      "page": "Investigate",
+      "status": "PASS",
+      "seconds": 0.064,
+      "charts": 2,
+      "tables": 2
+    },
+    {
+      "page": "Alerts",
+      "status": "PASS",
+      "seconds": 0.068,
+      "charts": 0,
+      "tables": 1
+    },
+    {
+      "page": "Forecast",
+      "status": "PASS",
+      "seconds": 0.128,
+      "charts": 1,
+      "tables": 2
+    },
+    {
+      "page": "Scenario Lab",
+      "status": "PASS",
+      "seconds": 0.02,
+      "charts": 0,
+      "tables": 1
+    },
+    {
+      "page": "Customers",
+      "status": "PASS",
+      "seconds": 0.063,
+      "charts": 2,
+      "tables": 3
+    },
+    {
+      "page": "Operations",
+      "status": "PASS",
+      "seconds": 0.326,
+      "charts": 1,
+      "tables": 2
+    },
+    {
+      "page": "Ask PULSE",
+      "status": "PASS",
+      "seconds": 0.008,
+      "charts": 0,
+      "tables": 0
+    },
+    {
+      "page": "Executive Brief",
+      "status": "PASS",
+      "seconds": 0.324,
+      "charts": 0,
+      "tables": 4
+    },
+    {
+      "page": "Data Quality",
+      "status": "PASS",
+      "seconds": 0.013,
+      "charts": 0,
+      "tables": 2
+    },
+    {
+      "page": "Methodology",
+      "status": "PASS",
+      "seconds": 0.019,
+      "charts": 0,
+      "tables": 1
+    }
+  ],
+  "alerts": 17,
+  "estimated_weekly_profit_exposure": 1890.374999999999,
+  "alert_seconds": 0.067,
+  "total_seconds": 4.69,
+  "db_bytes": 207884288,
+  "forecast_holdout": [
+    {
+      "metric": "revenue",
+      "selected_model": "Seasonal naive",
+      "MAE": 1103.1528571428576,
+      "RMSE": 1250.168389006629,
+      "MAPE": 0.04854171759433869,
+      "holdout_coverage": 0.5714285714285714,
+      "nominal_coverage": 0.9,
+      "calibration_origins": 3,
+      "validation_naive_MAE": 935.8775,
+      "validation_mean_MAE": 1076.6496130952385
+    },
+    {
+      "metric": "transactions",
+      "selected_model": "Seasonal naive",
+      "MAE": 58.285714285714285,
+      "RMSE": 69.71216331663877,
+      "MAPE": 0.04356865919713915,
+      "holdout_coverage": 0.5714285714285714,
+      "nominal_coverage": 0.9,
+      "calibration_origins": 3,
+      "validation_naive_MAE": 53.30952380952381,
+      "validation_mean_MAE": 54.333333333333336
+    },
+    {
+      "metric": "gross_profit",
+      "selected_model": "Seasonal naive",
+      "MAE": 743.4817857142867,
+      "RMSE": 856.1561707776891,
+      "MAPE": 0.050692449901677435,
+      "holdout_coverage": 0.6071428571428571,
+      "nominal_coverage": 0.9,
+      "calibration_origins": 3,
+      "validation_naive_MAE": 684.1740476190479,
+      "validation_mean_MAE": 861.2166666666669
+    },
+    {
+      "metric": "labour_hours",
+      "selected_model": "Seasonal naive",
+      "MAE": 18.479642857142853,
+      "RMSE": 20.71812706992874,
+      "MAPE": 0.0565072462569911,
+      "holdout_coverage": 0.17857142857142858,
+      "nominal_coverage": 0.9,
+      "calibration_origins": 3,
+      "validation_naive_MAE": 3.817380952380952,
+      "validation_mean_MAE": 5.623779761904757
+    }
+  ],
+  "raw_hash_check": "PASS"
+}
