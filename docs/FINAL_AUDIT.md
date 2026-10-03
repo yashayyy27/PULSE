@@ -4,7 +4,7 @@ Local audit date: **3 October 2026 (Australia/Sydney)**. All business records, s
 
 ## Implemented and verified
 
-The repository implements deterministic generation, constrained SQLite star schema, SQL daily/monthly/customer marts, 19 governed KPIs, source quality reporting, Executive Overview, weekly warnings, exact profit investigation, ten-dimensional revenue contribution analysis, explicit financial reference/stockout estimates, four forecasts, nine scenario levers, deterministic Ask PULSE, generated HTML executive brief, configurable health weights and session decision/scenario exports. Eleven application views are present; no empty feature page or placeholder button is used.
+The repository implements deterministic generation, constrained SQLite star schema, SQL daily/monthly/customer marts, 19 governed KPIs, source quality reporting, Home, weekly warnings, exact profit investigation, ten-dimensional revenue contribution analysis, explicit financial reference/stockout estimates, four forecasts, nine scenario levers, deterministic Ask PULSE, generated HTML executive brief, configurable health weights and session decision/scenario exports. Six primary destinations are present; no empty feature page or placeholder button is used.
 
 The full run produced **1060291 orders**, **36 stores** and **2024-01-01 to 2025-12-31** history. Source contracts passed **130 checks** with **0 failures**. All foreign keys and source-to-mart revenue/COGS/payroll/profit reconcile. Full verification covers **37 scopes** (company plus every store), **10 dimensions** and all views. Profit bridges and zero-change scenarios reconcile at every scope.
 
@@ -19,25 +19,20 @@ Existing `opspulse` / RESTOPS and parent coursework were preserved. PULSE is its
 - Pinned dependencies installed in a clean Python 3.12 virtual environment.
 - Full setup executed without credentials; actual build/export time recorded as **53.272 seconds** on this Mac. This is a local measurement, not an SLA.
 - Source reproducibility independently checked over all **13** compressed table files: **True** for repeated deterministic raw hashes.
-- `python -m pytest -q --junitxml=reports/test-results.xml`: **38 passed, zero failures** in the final clean environment.
+- `python -m pytest -q --junitxml=reports/test-results.xml`: **74 passed, zero failures** in the final clean environment.
 - Ruff check and format check pass. Local Markdown link/fence checks pass; results are saved in `reports/documentation_checks.json`.
 - **8/8 Mermaid diagrams** parse with Mermaid 11.12.0, including ERD, processes, pipeline, investigation, alert lifecycle and requirements lifecycle.
-- Full verification: **4.690 seconds**, database **198.3 MiB**; weekly warning engine **0.067 seconds**. Timing excludes browser asset/network loading and varies by host/cache.
-- Native local server launched on loopback; actual screenshots of overview, investigation, forecast and scenario are in `docs/screenshots`. Automated view checks also validate chart construction and navigation/proposal/scenario/question workflows. Developer inspection is not stakeholder UAT or WCAG certification.
+- Full verification: **3.952 seconds**, database **198.3 MiB**; weekly warning engine **0.060 seconds**. Timing excludes browser asset/network loading and varies by host/cache.
+- Native local server launched on loopback; actual screenshots of Home, investigation, Scenario Lab, Ask PULSE and Briefs are in `docs/screenshots`. Automated view checks also validate chart construction and navigation/proposal/scenario/question workflows. Developer inspection is not stakeholder UAT or WCAG certification.
 
 | View | Result | AppTest seconds | Charts | Tables |
 |---|---|---:|---:|---:|
-| Executive Overview | PASS | 0.355 | 1 | 1 |
-| Investigate | PASS | 0.064 | 2 | 2 |
-| Alerts | PASS | 0.068 | 0 | 1 |
-| Forecast | PASS | 0.128 | 1 | 2 |
-| Scenario Lab | PASS | 0.020 | 0 | 1 |
-| Customers | PASS | 0.063 | 2 | 3 |
-| Operations | PASS | 0.326 | 1 | 2 |
-| Ask PULSE | PASS | 0.008 | 0 | 0 |
-| Executive Brief | PASS | 0.324 | 0 | 4 |
-| Data Quality | PASS | 0.013 | 0 | 2 |
-| Methodology | PASS | 0.019 | 0 | 1 |
+| Home | PASS | 0.621 | 1 | 3 |
+| Signals | PASS | 0.024 | 0 | 2 |
+| Investigate | PASS | 0.078 | 2 | 4 |
+| Scenario Lab | PASS | 0.034 | 0 | 2 |
+| Ask PULSE | PASS | 0.013 | 0 | 2 |
+| Briefs | PASS | 0.317 | 0 | 2 |
 
 Ask PULSE initially has no table until a question is submitted; supported-intent and interaction tests exercise the returned numerical evidence. Hidden expanders are computed and tested, not empty content. Customer and campaign/brief scopes are explicitly labelled company-wide where applicable.
 
@@ -67,7 +62,7 @@ Simulated UAT results are generated from JUnit; real CFO approval, store-manager
 | Recruiter | Large feature list could conceal the business decision | README opens with purpose, actual preview and one computed store case; recruiter guide supplies timed paths |
 | BA hiring manager | Artefact volume can hide weak feature justification | Requirement/story/criterion/test/UAT/outcome matrix; workshop statement-to-feature chain; actual developer results distinguished from acceptance |
 | Data analyst | Grain inflation, identity counting and campaign comparison ambiguity | Independent SQL fact aggregation; period distinct customers; censoring; source ledgers reconciled; campaigns use prior 56-day same-weekday reference with minimum sample |
-| Engineer | Customer views repeated million-order scans | Materialised/indexed customer activity, retention and cohorts; Customers view reduced from 26.138s to the final measured timing above |
+| Engineer | Customer views repeated million-order scans | Materialised/indexed customer activity, retention and cohorts; contextual lenses compute only when requested; current six-destination timings are recorded above |
 | Executive | Overlapping exposure and scenario savings could be read as guaranteed benefit | Profit warnings counted once per store; estimate/forecast/scenario labels; assumptions shown; unapproved proposal status; forecast under-coverage warning |
 
 Additional fixes: realistic staffing/overhead calibration in generator; negative currency placed before the AUD prefix so Streamlit shows adverse profit deltas correctly; Markdown dollar signs escaped to avoid accidental mathematical rendering; navigation test targets actual proposal control after rerun; campaign assignment consistency validated against order discounts.
@@ -91,4 +86,4 @@ The app is a local synthetic prototype: no production authentication, RBAC, live
 9. **What makes a scenario defensible?** Zero changes reproduce the observed ledger. Price, quantity, demand and payroll are separate assumptions; no implicit elasticity. Retention uses a disclosed repeat-share proxy and campaign uptake changes discount share. Feasibility/service are untested.
 10. **What would you do before a real rollout?** Conduct actual discovery and metric/source approvals, add authenticated access and durable case management, run role-based UAT and prospective forecast/alert evaluation, then pilot with service guardrails and measured benefit baselines. The prototype does not claim those results.
 
-[Recruiter guide](RECRUITER_GUIDE.md) · [Case study](PORTFOLIO_CASE_STUDY.md) · [Architecture](ARCHITECTURE.md) · [UAT results](business-analysis/20-uat-results.md) · [Raw verification](../reports/full_verification.json)
+[UX transformation report](UI_UX_FINAL_REPORT.md) · [Interaction audit](UI_UX_INTERACTION_AUDIT.md) · [Recruiter guide](RECRUITER_GUIDE.md) · [Case study](PORTFOLIO_CASE_STUDY.md) · [Architecture](ARCHITECTURE.md) · [UAT results](business-analysis/20-uat-results.md) · [Raw verification](../reports/full_verification.json)

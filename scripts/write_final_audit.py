@@ -34,7 +34,7 @@ Local audit date: **3 October 2026 (Australia/Sydney)**. All business records, s
 
 ## Implemented and verified
 
-The repository implements deterministic generation, constrained SQLite star schema, SQL daily/monthly/customer marts, 19 governed KPIs, source quality reporting, Executive Overview, weekly warnings, exact profit investigation, ten-dimensional revenue contribution analysis, explicit financial reference/stockout estimates, four forecasts, nine scenario levers, deterministic Ask PULSE, generated HTML executive brief, configurable health weights and session decision/scenario exports. Eleven application views are present; no empty feature page or placeholder button is used.
+The repository implements deterministic generation, constrained SQLite star schema, SQL daily/monthly/customer marts, 19 governed KPIs, source quality reporting, Home, weekly warnings, exact profit investigation, ten-dimensional revenue contribution analysis, explicit financial reference/stockout estimates, four forecasts, nine scenario levers, deterministic Ask PULSE, generated HTML executive brief, configurable health weights and session decision/scenario exports. Six primary destinations are present; no empty feature page or placeholder button is used.
 
 The full run produced **{pipeline["orders"]} orders**, **{pipeline["locations"]} stores** and **{pipeline["start"]} to {pipeline["end"]}** history. Source contracts passed **{pipeline["validation_rules"]} checks** with **{pipeline["validation_failures"]} failures**. All foreign keys and source-to-mart revenue/COGS/payroll/profit reconcile. Full verification covers **{len(full["scopes"])} scopes** (company plus every store), **{full["dimensions"]} dimensions** and all views. Profit bridges and zero-change scenarios reconcile at every scope.
 
@@ -53,7 +53,7 @@ Existing `opspulse` / RESTOPS and parent coursework were preserved. PULSE is its
 - Ruff check and format check pass. Local Markdown link/fence checks pass; results are saved in `reports/documentation_checks.json`.
 - **{diagrams["passed"]}/{diagrams["diagrams"]} Mermaid diagrams** parse with Mermaid 11.12.0, including ERD, processes, pipeline, investigation, alert lifecycle and requirements lifecycle.
 - Full verification: **{full["total_seconds"]:.3f} seconds**, database **{full["db_bytes"] / 1024 / 1024:.1f} MiB**; weekly warning engine **{full["alert_seconds"]:.3f} seconds**. Timing excludes browser asset/network loading and varies by host/cache.
-- Native local server launched on loopback; actual screenshots of overview, investigation, forecast and scenario are in `docs/screenshots`. Automated view checks also validate chart construction and navigation/proposal/scenario/question workflows. Developer inspection is not stakeholder UAT or WCAG certification.
+- Native local server launched on loopback; actual screenshots of Home, investigation, Scenario Lab, Ask PULSE and Briefs are in `docs/screenshots`. Automated view checks also validate chart construction and navigation/proposal/scenario/question workflows. Developer inspection is not stakeholder UAT or WCAG certification.
 
 | View | Result | AppTest seconds | Charts | Tables |
 |---|---|---:|---:|---:|
@@ -84,7 +84,7 @@ Simulated UAT results are generated from JUnit; real CFO approval, store-manager
 | Recruiter | Large feature list could conceal the business decision | README opens with purpose, actual preview and one computed store case; recruiter guide supplies timed paths |
 | BA hiring manager | Artefact volume can hide weak feature justification | Requirement/story/criterion/test/UAT/outcome matrix; workshop statement-to-feature chain; actual developer results distinguished from acceptance |
 | Data analyst | Grain inflation, identity counting and campaign comparison ambiguity | Independent SQL fact aggregation; period distinct customers; censoring; source ledgers reconciled; campaigns use prior 56-day same-weekday reference with minimum sample |
-| Engineer | Customer views repeated million-order scans | Materialised/indexed customer activity, retention and cohorts; Customers view reduced from 26.138s to the final measured timing above |
+| Engineer | Customer views repeated million-order scans | Materialised/indexed customer activity, retention and cohorts; contextual lenses compute only when requested; current six-destination timings are recorded above |
 | Executive | Overlapping exposure and scenario savings could be read as guaranteed benefit | Profit warnings counted once per store; estimate/forecast/scenario labels; assumptions shown; unapproved proposal status; forecast under-coverage warning |
 
 Additional fixes: realistic staffing/overhead calibration in generator; negative currency placed before the AUD prefix so Streamlit shows adverse profit deltas correctly; Markdown dollar signs escaped to avoid accidental mathematical rendering; navigation test targets actual proposal control after rerun; campaign assignment consistency validated against order discounts.
@@ -108,7 +108,7 @@ The app is a local synthetic prototype: no production authentication, RBAC, live
 9. **What makes a scenario defensible?** Zero changes reproduce the observed ledger. Price, quantity, demand and payroll are separate assumptions; no implicit elasticity. Retention uses a disclosed repeat-share proxy and campaign uptake changes discount share. Feasibility/service are untested.
 10. **What would you do before a real rollout?** Conduct actual discovery and metric/source approvals, add authenticated access and durable case management, run role-based UAT and prospective forecast/alert evaluation, then pilot with service guardrails and measured benefit baselines. The prototype does not claim those results.
 
-[Recruiter guide](RECRUITER_GUIDE.md) · [Case study](PORTFOLIO_CASE_STUDY.md) · [Architecture](ARCHITECTURE.md) · [UAT results](business-analysis/20-uat-results.md) · [Raw verification](../reports/full_verification.json)
+[UX transformation report](UI_UX_FINAL_REPORT.md) · [Interaction audit](UI_UX_INTERACTION_AUDIT.md) · [Recruiter guide](RECRUITER_GUIDE.md) · [Case study](PORTFOLIO_CASE_STUDY.md) · [Architecture](ARCHITECTURE.md) · [UAT results](business-analysis/20-uat-results.md) · [Raw verification](../reports/full_verification.json)
 """
     (ROOT / "docs/FINAL_AUDIT.md").write_text(text)
     print("Final audit generated from executed local evidence")

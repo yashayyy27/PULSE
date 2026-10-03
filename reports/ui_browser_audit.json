@@ -1,0 +1,286 @@
+{
+  "date": "2026-10-03",
+  "environment": "Local Streamlit 1.45.1 / native Codex in-app browser",
+  "synthetic": true,
+  "responsive_checks": [
+    {
+      "page": "Home",
+      "requested_width": 1920,
+      "requested_height": 1080,
+      "observed_width": 1959,
+      "observed_height": 1102,
+      "document_width": 1959,
+      "horizontal_overflow": false,
+      "result": "PASS"
+    },
+    {
+      "page": "Signals",
+      "requested_width": 1920,
+      "requested_height": 1080,
+      "observed_width": 1959,
+      "observed_height": 1102,
+      "document_width": 1959,
+      "horizontal_overflow": false,
+      "result": "PASS"
+    },
+    {
+      "page": "Investigate",
+      "requested_width": 1920,
+      "requested_height": 1080,
+      "observed_width": 1959,
+      "observed_height": 1102,
+      "document_width": 1959,
+      "horizontal_overflow": false,
+      "result": "PASS"
+    },
+    {
+      "page": "Scenario Lab",
+      "requested_width": 1920,
+      "requested_height": 1080,
+      "observed_width": 1959,
+      "observed_height": 1102,
+      "document_width": 1959,
+      "horizontal_overflow": false,
+      "result": "PASS"
+    },
+    {
+      "page": "Ask PULSE",
+      "requested_width": 1920,
+      "requested_height": 1080,
+      "observed_width": 1959,
+      "observed_height": 1102,
+      "document_width": 1959,
+      "horizontal_overflow": false,
+      "result": "PASS"
+    },
+    {
+      "page": "Briefs",
+      "requested_width": 1920,
+      "requested_height": 1080,
+      "observed_width": 1959,
+      "observed_height": 1102,
+      "document_width": 1959,
+      "horizontal_overflow": false,
+      "result": "PASS"
+    },
+    {
+      "page": "Home",
+      "requested_width": 1366,
+      "requested_height": 900,
+      "observed_width": 1394,
+      "observed_height": 918,
+      "document_width": 1394,
+      "horizontal_overflow": false,
+      "result": "PASS"
+    },
+    {
+      "page": "Signals",
+      "requested_width": 1366,
+      "requested_height": 900,
+      "observed_width": 1394,
+      "observed_height": 918,
+      "document_width": 1394,
+      "horizontal_overflow": false,
+      "result": "PASS"
+    },
+    {
+      "page": "Investigate",
+      "requested_width": 1366,
+      "requested_height": 900,
+      "observed_width": 1394,
+      "observed_height": 918,
+      "document_width": 1394,
+      "horizontal_overflow": false,
+      "result": "PASS"
+    },
+    {
+      "page": "Scenario Lab",
+      "requested_width": 1366,
+      "requested_height": 900,
+      "observed_width": 1394,
+      "observed_height": 918,
+      "document_width": 1394,
+      "horizontal_overflow": false,
+      "result": "PASS"
+    },
+    {
+      "page": "Ask PULSE",
+      "requested_width": 1366,
+      "requested_height": 900,
+      "observed_width": 1394,
+      "observed_height": 918,
+      "document_width": 1394,
+      "horizontal_overflow": false,
+      "result": "PASS"
+    },
+    {
+      "page": "Briefs",
+      "requested_width": 1366,
+      "requested_height": 900,
+      "observed_width": 1394,
+      "observed_height": 918,
+      "document_width": 1394,
+      "horizontal_overflow": false,
+      "result": "PASS"
+    },
+    {
+      "page": "Home",
+      "requested_width": 600,
+      "requested_height": 900,
+      "observed_width": 612,
+      "observed_height": 918,
+      "document_width": 612,
+      "horizontal_overflow": false,
+      "result": "PASS"
+    },
+    {
+      "page": "Signals",
+      "requested_width": 600,
+      "requested_height": 900,
+      "observed_width": 612,
+      "observed_height": 918,
+      "document_width": 612,
+      "horizontal_overflow": false,
+      "result": "PASS"
+    },
+    {
+      "page": "Investigate",
+      "requested_width": 600,
+      "requested_height": 900,
+      "observed_width": 612,
+      "observed_height": 918,
+      "document_width": 612,
+      "horizontal_overflow": false,
+      "result": "PASS"
+    },
+    {
+      "page": "Scenario Lab",
+      "requested_width": 600,
+      "requested_height": 900,
+      "observed_width": 612,
+      "observed_height": 918,
+      "document_width": 612,
+      "horizontal_overflow": false,
+      "result": "PASS"
+    },
+    {
+      "page": "Ask PULSE",
+      "requested_width": 600,
+      "requested_height": 900,
+      "observed_width": 612,
+      "observed_height": 918,
+      "document_width": 612,
+      "horizontal_overflow": false,
+      "result": "PASS"
+    },
+    {
+      "page": "Briefs",
+      "requested_width": 600,
+      "requested_height": 900,
+      "observed_width": 612,
+      "observed_height": 918,
+      "document_width": 612,
+      "horizontal_overflow": false,
+      "result": "PASS"
+    }
+  ],
+  "guided_case": [
+    {
+      "stage": "Open the exact signal.",
+      "entity": "Norwood",
+      "kpi": "operating_profit",
+      "start": "2025-12-22",
+      "end": "2025-12-28",
+      "result": "PASS"
+    },
+    {
+      "stage": "Challenge why it triggered.",
+      "entity": "Norwood",
+      "kpi": "operating_profit",
+      "start": "2025-12-22",
+      "end": "2025-12-28",
+      "result": "PASS"
+    },
+    {
+      "stage": "Reveal the accounting evidence.",
+      "entity": "Norwood",
+      "kpi": "operating_profit",
+      "start": "2025-12-22",
+      "end": "2025-12-28",
+      "result": "PASS"
+    },
+    {
+      "stage": "Understand the commercial reference gap.",
+      "entity": "Norwood",
+      "kpi": "operating_profit",
+      "start": "2025-12-22",
+      "end": "2025-12-28",
+      "result": "PASS"
+    },
+    {
+      "stage": "Choose an investigation path.",
+      "entity": "Norwood",
+      "kpi": "operating_profit",
+      "start": "2025-12-22",
+      "end": "2025-12-28",
+      "result": "PASS"
+    },
+    {
+      "stage": "Test a bounded intervention.",
+      "entity": "Norwood",
+      "kpi": "operating_profit",
+      "start": "2025-12-22",
+      "end": "2025-12-28",
+      "result": "PASS"
+    },
+    {
+      "stage": "Bring the evidence into a brief.",
+      "entity": "Norwood",
+      "kpi": "operating_profit",
+      "start": "2025-12-22",
+      "end": "2025-12-28",
+      "result": "PASS"
+    },
+    {
+      "stage": "Document a proposed decision.",
+      "entity": "Norwood",
+      "kpi": "operating_profit",
+      "start": "2025-12-22",
+      "end": "2025-12-28",
+      "result": "PASS"
+    }
+  ],
+  "browser_checks": {
+    "pulse_marker_select_newcastle": "PASS",
+    "critical_filter_norwood": "PASS",
+    "acknowledge": "PASS",
+    "add_to_brief": "PASS",
+    "baseline_and_contributors": "PASS",
+    "keyboard_navigation": "PASS",
+    "keyboard_scenario_hours_minus_3": "PASS",
+    "guided_back_and_exit": "PASS",
+    "contextual_profit_suggestion": "PASS",
+    "scenario_return_through_ask_briefs_home": "PASS after authoritative callback fix",
+    "table_column_hide_restore": "PASS",
+    "table_search_next_previous_close": "PASS",
+    "table_fullscreen_close": "PASS",
+    "native_grid_csv": "REMOVED: native client-side CSV did not produce a download in the embedded browser; dedicated server-backed evidence exports passed",
+    "brief_html_download_and_parse": "PASS",
+    "brief_json_download_and_parse": "PASS",
+    "answer_csv_download_and_parse": "PASS"
+  },
+  "console_errors_at_final_review": [],
+  "screenshots": [
+    "home.jpg",
+    "signals.jpg",
+    "investigate.jpg",
+    "scenario.jpg",
+    "ask.jpg",
+    "brief.jpg"
+  ],
+  "limitations": [
+    "Developer verification, not real stakeholder UAT or WCAG certification.",
+    "Responsive dimensions report embedded-browser scaling; Python render timings exclude browser/network latency.",
+    "Repeated feed rows use shared handlers; not every row was manually clicked."
+  ]
+}

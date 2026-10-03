@@ -9,7 +9,7 @@ from time import perf_counter
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import numpy as np
 from streamlit.testing.v1 import AppTest
-from app.components import PAGES
+from app.state import PAGES
 from pulse.analytics.core import DIMENSIONS, contributions, daily, investigate, latest_week, ledger
 from pulse.alerts.engine import detect, exposure_summary
 from pulse.forecasting.engine import forecast
@@ -73,6 +73,7 @@ def main():
         app.session_state["nav"] = page
         app.run()
         assert not app.exception, (page, [item.message for item in app.exception])
+        assert not app.error, (page, [item.value for item in app.error])
         page_results.append(
             {
                 "page": page,

@@ -2,7 +2,7 @@
 
 # UAT plan
 
-Scope: eleven views and the complete decision workflow, using synthetic data. Developer automation supplies executable evidence; this is **simulated UAT**, not acceptance by real COO/CFO/store managers.
+Scope: six destinations, contextual analytical lenses and the complete decision workflow, using synthetic data. Developer automation supplies executable evidence; this is **simulated UAT**, not acceptance by real COO/CFO/store managers.
 
 Entry: validated DB, reconciled ledgers and test fixtures; each acceptance criterion has a named test. Execution: pytest exercises known ledger inputs, deliberate corruption, forecasting split changes, all views, drill-down/navigation, scenario save, question analysis and decision proposal. Record IDs, expected/actual outcomes and test case results from JUnit rather than manually marking Pass.
 

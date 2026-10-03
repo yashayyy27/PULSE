@@ -2,7 +2,7 @@
 
 # Implementation plan
 
-**Delivered portfolio release:** local synthetic pipeline, eleven application views, SQL/analytics tests, simulated UAT and evidence exports. This demonstrates mechanics; it is not an installed organisational system.
+**Delivered portfolio release:** local synthetic pipeline, six primary destinations and contextual evidence lenses, SQL/analytics tests, simulated UAT and evidence exports. This demonstrates mechanics; it is not an installed organisational system.
 
 **Potential organisational rollout:**
 1. Pilot three stores and one regional manager; obtain real source contracts, metric approvals, least-privilege access and privacy review.

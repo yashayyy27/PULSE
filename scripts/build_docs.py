@@ -27,7 +27,7 @@ Deliverables: constrained synthetic star schema; SQL analytical marts; KPI regis
 
 In scope: a local portfolio prototype, synthetic discovery and developer verification. Out of scope: live POS/payroll integration, customer targeting, autonomous recommendations, production access controls, real stakeholder approval and legal roster validation. A prototype cannot establish organisational benefit.
 
-Exit gates: full source generation and reconciliation; functioning eleven views; analytics and navigation tests; no fabricated UAT pass; accessible textual chart evidence; reproducible setup and documented trade-offs. [Traceability](16-traceability-matrix.md) connects each deliverable to a need. [Implementation plan](23-implementation-plan.md) distinguishes this release from a potential organisational rollout.
+Exit gates: full source generation and reconciliation; functioning six primary destinations and contextual evidence lenses; analytics and navigation tests; no fabricated UAT pass; accessible textual chart evidence; reproducible setup and documented trade-offs. [Traceability](16-traceability-matrix.md) connects each deliverable to a need. [Implementation plan](23-implementation-plan.md) distinguishes this release from a potential organisational rollout.
 """,
     "03-stakeholder-map.md": """# Stakeholder map
 
@@ -98,20 +98,20 @@ Value vs effort matrix: high value / low effort = executive summary and brief; h
 
 | ID | What PULSE must do | Implemented feature |
 |---|---|---|
-| FR-001 | Show revenue/profit/margin/orders with equal-length period comparison | Executive Overview |
+| FR-001 | Show revenue/profit/margin/orders with equal-length period comparison | Home |
 | FR-002 | Calculate governed ratios from additive sums and distinct period customers | KPI registry and ledger |
-| FR-003 | Flag adverse complete-week deviations with baseline, severity and exposure | Alerts |
+| FR-003 | Flag adverse complete-week deviations with baseline, severity and exposure | Signals |
 | FR-004 | Reconcile profit movement and rank ten dimensions of revenue movement | Investigate |
 | FR-005 | Quantify conditional stockout opportunity and prevent overlapping exposure totals | Operations / alert exposure summary |
-| FR-006 | Forecast revenue, orders, GP and paid hours with chronological evaluation | Forecast |
+| FR-006 | Forecast revenue, orders, GP and paid hours with chronological evaluation | Investigate / Forecast lens |
 | FR-007 | Preserve base case at zero changes and compare saved conditional scenarios | Scenario Lab |
 | FR-008 | Route supported analytical questions to bounded evidence; reject SQL/unknown intent | Ask PULSE |
 | FR-009 | Show repeat/retention/cohorts and observational promotion economics | Customers / Operations |
-| FR-010 | Export a company-wide brief from computed results | Executive Brief |
+| FR-010 | Export a company-wide brief from computed results | Briefs |
 | FR-011 | Validate raw contracts and publish only a reconciled constrained model | Pipeline / Data Quality |
 | FR-012 | Record an unapproved proposed investigation and export session evidence | Investigate decision form |
 | FR-013 | Explain targets and configure health dimension weights | Methodology |
-| FR-014 | Offer store/period scope and working warning-to-store navigation | Shared sidebar / Alerts |
+| FR-014 | Offer store/period scope and working warning-to-store navigation | Shared context / Signals |
 
 Metric semantics and scope exceptions are visible: retention, campaigns and brief are company-wide; forecasts end at the dataset origin; weekly alerts always use the latest complete week. See [acceptance criteria](11-acceptance-criteria.md) for testable outcomes and [dictionary](12-kpi-dictionary.md) for limits.
 """,
@@ -119,7 +119,7 @@ Metric semantics and scope exceptions are visible: retention, campaigns and brie
 
 | ID | Quality constraint and verification | Current boundary |
 |---|---|---|
-| NFR-001 Usability | All eleven views render; overview has four headline measures and textual warning evidence | Developer walkthrough, not manager usability study |
+| NFR-001 Usability | All six destinations render; Home presents health, exposure and actionable signal evidence | Developer walkthrough, not manager usability study |
 | NFR-002 Maintainability | Modular engines; central registry; Ruff and pytest in CI | No microservices or unnecessary adapter layers |
 | NFR-003 Performance | Full 0.5–1.5m order target works locally; small CI fixture; query latency recorded in audit | Measured host-specific timings, no production SLA |
 | NFR-004 Reliability | Validation/FK/reconciliation fail before atomic database replacement | Prototype crash recovery preserves prior DB |
@@ -224,9 +224,9 @@ Sales lineages: source order → fact_sales → location/day aggregation → rev
 |---|---|---|---|
 | R-01 Synthetic mechanics mistaken for real-company evidence | High / high | BA | Label every surface; no achieved benefits; interview discussion explicit |
 | R-02 Fanout inflates payroll and profit errors | Medium / high | Analytics | Pre-aggregate facts; independent ledger tests |
-| R-03 Slow drift normalises into rolling baseline | High / medium | Operations | Inspect trends and period movement; production add seasonal/control baselines |
+| R-03 Slow drift normalises into rolling baseline | High / medium | Investigate / Operations lens | Inspect trends and period movement; production add seasonal/control baselines |
 | R-04 Campaign confounding creates false causal claims | High / high | Marketing | Label observational ROI; pilot with controls before budget shift |
-| R-05 Holiday and event seasonality creates false alerts | High / medium | Operations | Complete weeks reduce weekday bias; production calendar/event controls |
+| R-05 Holiday and event seasonality creates false alerts | High / medium | Investigate / Operations lens | Complete weeks reduce weekday bias; production calendar/event controls |
 | R-06 Low forecast interval coverage | Medium / high | Planner | Show holdout coverage and small calibration sample; reject guaranteed forecasts |
 | R-07 Users confuse cohort retention with repeat rate | Medium / medium | Marketing | Governed definitions, distinct customer counts, final-month censoring |
 | R-08 Staff cuts harm service | Medium / high | Store Manager | Conditional scenario only; pre-agreed satisfaction/service guardrails |
@@ -248,7 +248,7 @@ Local SQLite, no credentials and session-only decision/scenario exports constrai
 """,
     "19-uat-plan.md": """# UAT plan
 
-Scope: eleven views and the complete decision workflow, using synthetic data. Developer automation supplies executable evidence; this is **simulated UAT**, not acceptance by real COO/CFO/store managers.
+Scope: six destinations, contextual analytical lenses and the complete decision workflow, using synthetic data. Developer automation supplies executable evidence; this is **simulated UAT**, not acceptance by real COO/CFO/store managers.
 
 Entry: validated DB, reconciled ledgers and test fixtures; each acceptance criterion has a named test. Execution: pytest exercises known ledger inputs, deliberate corruption, forecasting split changes, all views, drill-down/navigation, scenario save, question analysis and decision proposal. Record IDs, expected/actual outcomes and test case results from JUnit rather than manually marking Pass.
 
@@ -271,7 +271,7 @@ Changes affect decision habits and responsibility, not only interface skills. Es
 """,
     "23-implementation-plan.md": """# Implementation plan
 
-**Delivered portfolio release:** local synthetic pipeline, eleven application views, SQL/analytics tests, simulated UAT and evidence exports. This demonstrates mechanics; it is not an installed organisational system.
+**Delivered portfolio release:** local synthetic pipeline, six primary destinations and contextual evidence lenses, SQL/analytics tests, simulated UAT and evidence exports. This demonstrates mechanics; it is not an installed organisational system.
 
 **Potential organisational rollout:**
 1. Pilot three stores and one regional manager; obtain real source contracts, metric approvals, least-privilege access and privacy review.

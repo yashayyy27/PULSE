@@ -4,13 +4,13 @@
 
 PULSE helps a fictional 36-store Australian business detect performance changes, investigate accounting contributors and challenge a proposed decision. It demonstrates Business Analysis supported by SQL/Python; all data and discovery are synthetic.
 
-![Actual Executive Overview](screenshots/executive.jpg)
+![Actual PULSE morning view](screenshots/home.jpg)
 
 One computed example: the full demo detects a Norwood operating-profit warning. Review the [generated Monday brief](../reports/monday_brief.json) for actual/baseline/exposure and the [recommendations](business-analysis/21-executive-recommendations.md) for the proposed investigation. No real company outcome is claimed.
 
 ## If you have 2 minutes
 
-Run the app, inspect Executive Overview → Alerts → Norwood investigation → Scenario Lab. Compare profit bridge and a 5% hours sensitivity before recording an unapproved proposal. Observe that a conditional saving is not an achieved result. [Walkthrough](DEMO.md).
+Run the app and choose the 90-second guided demo, or follow Home → Signals → Norwood investigation → Scenario Lab → Briefs. Challenge the warning reference and accounting bridge, compare a conditional hours/demand scenario, then export an explicitly unapproved proposal. Ask PULSE is globally accessible. A reference gap or modelled improvement is not an achieved benefit. [Walkthrough](DEMO.md).
 
 ## If you have 5 minutes
 

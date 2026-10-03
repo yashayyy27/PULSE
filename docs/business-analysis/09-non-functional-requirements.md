@@ -4,7 +4,7 @@
 
 | ID | Quality constraint and verification | Current boundary |
 |---|---|---|
-| NFR-001 Usability | All eleven views render; overview has four headline measures and textual warning evidence | Developer walkthrough, not manager usability study |
+| NFR-001 Usability | All six destinations render; Home presents health, exposure and actionable signal evidence | Developer walkthrough, not manager usability study |
 | NFR-002 Maintainability | Modular engines; central registry; Ruff and pytest in CI | No microservices or unnecessary adapter layers |
 | NFR-003 Performance | Full 0.5–1.5m order target works locally; small CI fixture; query latency recorded in audit | Measured host-specific timings, no production SLA |
 | NFR-004 Reliability | Validation/FK/reconciliation fail before atomic database replacement | Prototype crash recovery preserves prior DB |

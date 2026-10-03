@@ -1,12 +1,17 @@
-# Two-minute decision walkthrough
+# A 90-second analytical case
 
-All data, stakeholders and decisions are synthetic. Build the full demo for the following case; the six-store CI sample has different findings.
+Run the full synthetic demo, open **Home**, and choose **90-second guided demo**. Next, Back and Exit demo remain available throughout. The six-store CI fixture has different results; the tour chooses an actual computed warning rather than inventing a Norwood finding.
 
-1. Executive Overview: read observed revenue/profit/margin/orders and the complete-week dates. Note the estimated exposure excludes overlapping KPI warnings.
-2. Alerts: choose Norwood / operating_profit, inspect actual, median reference, expected range and severity; use “Investigate this store”.
-3. Investigate: inspect the reconciled bridge. Switch dimension from State through Location/Category/Product; use state/district and store selectors to inspect regional context. Associated contributions are not causes.
-4. Scenario Lab: retain Norwood scope, change labour hours by -5%, leave demand/price fixed. Compare base/scenario/difference. This sensitivity assumes service is unaffected and must not be called a realised saving. Save a second case with -3% transactions to challenge that assumption.
-5. Return to Investigate and record an unapproved proposal with a fictional owner, then export the session log. Explain service guardrails and why approval is outside the app.
-6. Executive Brief: export company-wide HTML. Forecast covers the 28 days after dataset end; its origin differs from the complete-week report cutoff. Ask PULSE can answer “Why did profit decline last month?” using actual numbers, even when the question's premise is false.
+1. **Home:** read the health index, current signal count and operating-profit exposure. Select a marker on The Pulse or use the labelled selector. In the full dataset, Norwood's actual profit is −A$795 against an eight-week median of −A$22, with a rounded A$774 reference gap.
+2. **Investigate:** the location, KPI and 22–28 December 2025 period follow the selected signal. Open **Why is this signal here?** and challenge the heuristic reference. The guided case opens this evidence at its baseline step.
+3. Reveal **Show contributors**. The bridge reconciles to the previous-week profit difference, which is a different comparison from the warning median. Change the business driver to inspect product/channel/customer-segment associations.
+4. Read estimated exposure and compare previous period, company, state or eight-week reference. Choose what to investigate next. The hours preview discloses unmodelled service/demand responses.
+5. **Scenario Lab:** the guided case preloads −3% hours with −1% demand. Change an assumption, see live base/scenario/delta, and challenge the result. Reset restores the exact observed ledger. Save a case for consideration; no benefit or approval is claimed.
+6. **Ask PULSE:** globally accessible. A selected-signal question returns actual median/MAD evidence; profit, labour and product questions use deterministic engines. Follow-ups retain the answer's effective scope and period. “Last month” explicitly changes the answer window.
+7. **Briefs:** selected findings, considered scenarios and unapproved proposals retain their scope. Reorder or remove findings, then export real HTML/JSON. The final guided step creates an explicitly fictional proposal with service and demand guardrails, not an approval.
 
-For a longer interview, inspect KPI and data dictionaries, SQL fact aggregation, forecast validation/holdout separation, deliberately corrupted-data tests and requirements traceability. [Case study](PORTFOLIO_CASE_STUDY.md).
+To explore independently, exit the tour at any time. Reset context returns to the company/latest week and clears current assumptions/questions; intentionally saved findings, scenarios and proposals remain until removed or the session closes. Export to retain them.
+
+Customer, operations and forecast lenses are available through **Review customer, operations or forecast evidence** inside Investigate. The forecast starts after the final dataset date, regardless of the observed-period selector; the UI discloses weak held-out band coverage. Source checks, the KPI registry and exploratory health weights live in the top **source checks** panel.
+
+For a longer interview, inspect [architecture](ARCHITECTURE.md), [traceability](business-analysis/16-traceability-matrix.md), [the experience audit](UI_UX_INTERACTION_AUDIT.md) and [case study](PORTFOLIO_CASE_STUDY.md). All records, discovery, roles and proposals are synthetic; developer tests are not stakeholder acceptance.

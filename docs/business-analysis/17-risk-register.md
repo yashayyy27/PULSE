@@ -6,9 +6,9 @@
 |---|---|---|---|
 | R-01 Synthetic mechanics mistaken for real-company evidence | High / high | BA | Label every surface; no achieved benefits; interview discussion explicit |
 | R-02 Fanout inflates payroll and profit errors | Medium / high | Analytics | Pre-aggregate facts; independent ledger tests |
-| R-03 Slow drift normalises into rolling baseline | High / medium | Operations | Inspect trends and period movement; production add seasonal/control baselines |
+| R-03 Slow drift normalises into rolling baseline | High / medium | Investigate / Operations lens | Inspect trends and period movement; production add seasonal/control baselines |
 | R-04 Campaign confounding creates false causal claims | High / high | Marketing | Label observational ROI; pilot with controls before budget shift |
-| R-05 Holiday and event seasonality creates false alerts | High / medium | Operations | Complete weeks reduce weekday bias; production calendar/event controls |
+| R-05 Holiday and event seasonality creates false alerts | High / medium | Investigate / Operations lens | Complete weeks reduce weekday bias; production calendar/event controls |
 | R-06 Low forecast interval coverage | Medium / high | Planner | Show holdout coverage and small calibration sample; reject guaranteed forecasts |
 | R-07 Users confuse cohort retention with repeat rate | Medium / medium | Marketing | Governed definitions, distinct customer counts, final-month censoring |
 | R-08 Staff cuts harm service | Medium / high | Store Manager | Conditional scenario only; pre-agreed satisfaction/service guardrails |

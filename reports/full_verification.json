@@ -199,87 +199,52 @@
   "dimensions": 10,
   "pages": [
     {
-      "page": "Executive Overview",
+      "page": "Home",
       "status": "PASS",
-      "seconds": 0.355,
+      "seconds": 0.621,
       "charts": 1,
-      "tables": 1
+      "tables": 3
+    },
+    {
+      "page": "Signals",
+      "status": "PASS",
+      "seconds": 0.024,
+      "charts": 0,
+      "tables": 2
     },
     {
       "page": "Investigate",
       "status": "PASS",
-      "seconds": 0.064,
+      "seconds": 0.078,
       "charts": 2,
-      "tables": 2
-    },
-    {
-      "page": "Alerts",
-      "status": "PASS",
-      "seconds": 0.068,
-      "charts": 0,
-      "tables": 1
-    },
-    {
-      "page": "Forecast",
-      "status": "PASS",
-      "seconds": 0.128,
-      "charts": 1,
-      "tables": 2
+      "tables": 4
     },
     {
       "page": "Scenario Lab",
       "status": "PASS",
-      "seconds": 0.02,
+      "seconds": 0.034,
       "charts": 0,
-      "tables": 1
-    },
-    {
-      "page": "Customers",
-      "status": "PASS",
-      "seconds": 0.063,
-      "charts": 2,
-      "tables": 3
-    },
-    {
-      "page": "Operations",
-      "status": "PASS",
-      "seconds": 0.326,
-      "charts": 1,
       "tables": 2
     },
     {
       "page": "Ask PULSE",
-      "status": "PASS",
-      "seconds": 0.008,
-      "charts": 0,
-      "tables": 0
-    },
-    {
-      "page": "Executive Brief",
-      "status": "PASS",
-      "seconds": 0.324,
-      "charts": 0,
-      "tables": 4
-    },
-    {
-      "page": "Data Quality",
       "status": "PASS",
       "seconds": 0.013,
       "charts": 0,
       "tables": 2
     },
     {
-      "page": "Methodology",
+      "page": "Briefs",
       "status": "PASS",
-      "seconds": 0.019,
+      "seconds": 0.317,
       "charts": 0,
-      "tables": 1
+      "tables": 2
     }
   ],
   "alerts": 17,
   "estimated_weekly_profit_exposure": 1890.374999999999,
-  "alert_seconds": 0.067,
-  "total_seconds": 4.69,
+  "alert_seconds": 0.06,
+  "total_seconds": 3.952,
   "db_bytes": 207884288,
   "forecast_holdout": [
     {
